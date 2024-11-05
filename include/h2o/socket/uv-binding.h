@@ -52,6 +52,7 @@ void h2o_timer_unlink(h2o_timer_t *timer);
 
 static inline struct timeval h2o_gettimeofday(uv_loop_t *loop)
 {
+    (void)loop;
     struct timeval tv_at;
     gettimeofday(&tv_at, NULL);
     return tv_at;
